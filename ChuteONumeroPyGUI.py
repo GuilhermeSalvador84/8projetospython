@@ -42,6 +42,7 @@ class ChuteONumero:
                          if int(self.valor_do_chute) == self.valor_aleatorio:
                             self.tentar_novamente = False
                             print('PARABÉNS VOCÊ ACERTOU!!')
+                            break
         except:
             print('Favor digitar apenas números!')
             self.iniciar()
@@ -51,6 +52,8 @@ class ChuteONumero:
 
     def GerarNumeroAleatorio(self):
         self.valor_aleatorio = random.randint(self.valor_minimo, self.valor_maximo)
+
+        return 0;
 
 chute = ChuteONumero()
 chute.iniciar()
